@@ -1,4 +1,7 @@
 # FKPP on 1 dimension
+
+![](https://raw.githubusercontent.com/TheOpenBacteriaProject/Branding/master/Documentation-Media/Document-Header.png)
+
 We want to simulate the FKPP.
 ## The equation
 ![first equation](https://latex.codecogs.com/gif.latex?u_%7Bt%7D%3DD%20u_%7Bxx%7D%20&plus;%20ru%281-u%29)
