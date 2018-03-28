@@ -2,7 +2,7 @@
 
 % dato inicial para la resolucion        
 
-%Número de particiones del intervalo
+%NÃºmero de particiones del intervalo
 m = 100; 
 %Extremos del intervalo
 a = 0; b = 1;  
