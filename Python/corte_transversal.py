@@ -3,6 +3,9 @@
 """
 Esta funcion permite dibujar el corte trasnversal de la placa 
 Tambien permite buscar el que puede ser más represenatativo.
+Este corte es puramente teórico y puede ser representativo, pero creemos 
+prudente que solo se use para ver la posible validez del modelo.
+En futuras adpataciones podemos reformarlo para que se ajuste aún mas a la realidad.
 
 De nuevo este codigo se ejecuta usando el IDE Spyder, por lo que antes debe haberse ejecutado
 el codigo principal de la simulación con el fin de obtener los datos.
