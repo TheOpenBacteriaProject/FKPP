@@ -1,4 +1,4 @@
-# FKPP on 1 dimension
+# FKPP on multiples dimensions
 
 ![](https://raw.githubusercontent.com/TheOpenBacteriaProject/Branding/master/Documentation-Media/Document-Header.png)
 
