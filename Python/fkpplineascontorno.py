@@ -27,7 +27,7 @@ from numpy import exp,arange
 from pylab import meshgrid,cm,imshow,contour,clabel,colorbar,axis,title,show,savefig
 import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
-
+print("Dependencies loaded...")
 #Definimos la función para crear nuestro mapa de colores personalizado 
 #con los colores del proyecto
 
