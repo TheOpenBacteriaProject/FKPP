@@ -51,6 +51,6 @@ Search for a relevant transversal cut and show it (both from X and Y axes)
 
 Show the percentage of surface cover by bacteria.
 
-  ``Cantidad de placa de petri con bacterias: 8.625265392781316%
+  ``Cantidad de placa de petri con bacterias: 8.625265392781316%``
   
-  Cantidad de superfice experimental con bacterias: 6.24%``
+  ``Cantidad de superfice experimental con bacterias: 6.24%``
