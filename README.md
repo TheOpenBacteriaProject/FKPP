@@ -32,18 +32,25 @@ Finally the files named with ``_web.py`` at the end, are formated exclusively to
 
 Execute the main algorithm and offer a 3D view of it
 
+![3d output](https://github.com/TheOpenBacteriaProject/FKPP/blob/master/images/3dvision.png)
 
 - ``fkpplineascontorno.py`` (matrix needed, take the one that it is saved)
 
 Offers a description of our matrix seen from above. A classical look. It also create countour lines to visualize the heigth
 .
 
+![countour lines](https://github.com/TheOpenBacteriaProject/FKPP/blob/master/images/contorno.png)
 
 - ``cortetransversal.py`` (matrix needed, take the one that it is saved)
 
 Search for a relevant transversal cut and show it (both from X and Y axes)
 
+![t. cut](https://github.com/TheOpenBacteriaProject/FKPP/blob/master/images/corte.png)
 
 - ``funciones_aux.py`` (matrix needed, take the one that it is saved)
 
 Show the percentage of surface cover by bacteria.
+
+  ``Cantidad de placa de petri con bacterias: 8.625265392781316%
+  
+  Cantidad de superfice experimental con bacterias: 6.24%``
