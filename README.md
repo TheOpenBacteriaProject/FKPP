@@ -26,18 +26,22 @@ More information about this numerical method can be found at the documentation f
 For this part we have code all the algorithms and function in python. The majority of them can be executed in your favorite IDE at least if it is capable of save variable definitions. Most of the code begins with ``fkppdosdimensiones.py`` which do the algorithm and plot the results. Them multiple functions can be executed if you can give them the matrix that represents the state in the moment you are interested in. For this reason, if you execute the first file in Spyder3, this IDE save the matrix value and then you can execute different functions that offer different data.
 Finally the files named with ``_web.py`` at the end, are formated exclusively to be executed at the backend of our database.
 ### Example of diferent outputs:
-- fkppdosdimensiones.py (first executed)
+- ``fkppdosdimensiones.py`` (first executed)
+
 Execute the main algorithm and offer a 3D view of it
 
 
-- fkpplineascontorno.py (matrix needed, take the one that it is saved)
+- ``fkpplineascontorno.py`` (matrix needed, take the one that it is saved)
+
 Offers a description of our matrix seen from above. A classical look. It also create countour lines to visualize the heigth
 .
 
 
-- cortetransversal.py (matrix needed, take the one that it is saved)
+- ``cortetransversal.py`` (matrix needed, take the one that it is saved)
+
 Search for a relevant transversal cut and show it (both from X and Y axes)
 
 
-- funciones_aux.py (matrix needed, take the one that it is saved)
+- ``funciones_aux.py`` (matrix needed, take the one that it is saved)
+
 Show the percentage of surface cover by bacteria.
