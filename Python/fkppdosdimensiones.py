@@ -24,7 +24,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from numpy import exp,arange
 from pylab import meshgrid,cm,imshow,contour,clabel,colorbar,axis,title
 import matplotlib.colors as mcolors
-
+print("Dependencies loaded...")
 
 #Definimos la función para crear nuestro mapa de colores personalizado 
 #con los colores del proyecto
@@ -59,7 +59,7 @@ tiempo_inicial = time()
 nx = 50
 ny = 50
 nt = 17
-vel=10
+vel=15
 nu = .02
 dx = 10.0 / (nx - 1) #discretizaciones
 dy = 10.0 / (ny - 1)
@@ -97,7 +97,7 @@ title('Condicion inicial');
 
 
 ###Definimos la función que evoluciona nuestro proceso biologico:
-###la entrada es el tamaño temporal y el mallado, que se mantiene fijo por motivos 
+###la entrada es el tamaño temporal (el modificable) y el mallado, que se mantiene fijo por motivos 
 ### de estabilidad.
 
 def FKPP(nt,nx):
@@ -149,7 +149,7 @@ def FKPP(nt,nx):
 
 #Creacion de la grafica:
 
-u=FKPP(100,nx)
+u=FKPP(200,nx)
 fig = pyplot.figure()
 ax = fig.gca(projection='3d')
 surf = ax.plot_surface(X, Y, u[:], rstride=1, cstride=1, cmap=rvb,
@@ -157,8 +157,8 @@ surf = ax.plot_surface(X, Y, u[:], rstride=1, cstride=1, cmap=rvb,
 ax.set_zlim(0, 10.5)
 ax.set_xlabel('$x$')
 ax.set_ylabel('$y$')
-title('concetracion bacterias');
-
+title('concetracion bacterias')
+pyplot.show()
 
 #Recogemos los datos de tiempo generados
 tiempo_final = time() 
