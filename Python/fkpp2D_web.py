@@ -5,11 +5,9 @@ CODIGO PARA EJECUCION DENTRO DEL BACKEND DE LA WEB
 Presentamos  la funcion con el algoritmo mediante el cual podemos generar la simulacion en 3d 
 de la ecuacion FKPP. El proceso seguido es el que se puede encontrar en la 
 documentacion del proyecto.
-
 Este codigo nos sirve para interactuar con la web y la base de datos de forma óptima, dejando 
 para la inspección los otros códigos. Todos los que tenga esto como fin vendrán marcados
 con el identificativo: WEB
-
 @author: TheOpenBacteriaProject
 """
 #Importamos distintas librerías utiles para el desarrollo del codigo en todos los códigos
@@ -26,24 +24,31 @@ from numpy import exp,arange
 from pylab import meshgrid,cm,imshow,contour,clabel,colorbar,axis,title
 import matplotlib.colors as mcolors
 import sys
-print("Dependencies loaded...")
+
 
 #Este codigo nos permite ejecutar el algoritmo directamente desde la terminal 
 #añadiendo parámetros. Permitiendo codificar cada serie de evolucion temporal
 # con el valor de los parametros
 
-if(len(sys.argv) > 3):
-    print( "El nombre del programa es " + sys.argv[0])
-    print( "La matriz de entrada es " + sys.argv[1])
-    print( "El tiempo total es " + sys.argv[2])
-    print( "La velocidad es " + sys.argv[3])
-else:
-    print( "Necesario ejecutar con 3 parámetros parámetros")
-    print( "python fkpp2D_web.py matriz tiempo velocidad")
-    
+if(len(sys.argv) < 3):
+	print("Necesario ejecutar con 3 parámetros con el siguiente formato")
+	print("1º Parametro: Matriz de datos")
+	print("2º Parametro: Tiempo del experimento")
+	print("3º Parametro: Velocidad del experimento")
+	sys.exit(1)
+	
+
+
+#Obtengo los datos de los parametros    
+matriz = int(sys.argv[1])
+tiempo = int(sys.argv[2])
+velocidad = int(sys.argv[3])
 
 #Describimos el algoritmo prinicipal.
-
+#La funcion recibe tres parametros
+#1º u  => Matriz de datos
+#2º nt => Tiempo del experimento
+#3º v  => Velocidad del experimento
 def FKPP(u,nt,v):
     nx = 50
     ny = 50
@@ -56,9 +61,7 @@ def FKPP(u,nt,v):
     
     x = numpy.linspace(-5, 5, nx)
     y = numpy.linspace(-5, 5, ny)
-    un = numpy.ones((ny, nx))
-    
-    
+
     #Ciclo para la evolucion descrita en la documentación.
     for n in range(nt + 1): 
         un = u.copy()
@@ -94,6 +97,10 @@ def FKPP(u,nt,v):
                 
     return u
 
-FKPP(u,100,7)
+
+#En caso de que u sea 0, se usa la matriz de datos por defecto
+if matriz == 0:
+	matriz = numpy.ones((50, 50)) 
 
 
+FKPP(matriz,tiempo,velocidad)
