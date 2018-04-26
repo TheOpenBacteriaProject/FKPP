@@ -7,6 +7,7 @@
 * *Documentation* contains all the mathematical documentation.
 * *Python* contains our programs.
 * *images* contains all output pics from our programs.
+* *Demo* contains a demo for Festival Impaciencia.
 
 ## Repository description
 
